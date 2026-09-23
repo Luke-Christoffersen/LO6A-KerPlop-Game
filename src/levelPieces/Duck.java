@@ -1,11 +1,18 @@
 package levelPieces;
 
 import gameEngine.Drawable;
-import java.util.random.*;
+import gameEngine.GameEngine;
+
+import java.util.Random;
 import gameEngine.Moveable;
 import gameEngine.InteractionResult;
 
 public class Duck extends GamePiece implements Drawable, Moveable{
+	
+	// Private member variables
+	private char symbol;
+	private String label;
+	private int location;
 	
 	/*
 	 * Constructor for a Duck moving game piece. This will be the randomly moving piece
@@ -26,11 +33,28 @@ public class Duck extends GamePiece implements Drawable, Moveable{
 	 * @param playerLocation: Integer value representing the location of the duck
 	 * */ 
 	public InteractionResult interact(Drawable[] gameboard, int playerLocation) {
-		// @TODO: Implement duck-player interaction. Generate a random number between 1 and 3 inclusive. 
-		// If 1: The player gets a point
-		// If 2: The player gets a point
-		// If 3: The player gets to advance
-		return InteractionResult.NONE;
+		
+		// Random object creation
+		Random randInt = new Random();
+		// Generate a random number between 0-3
+		int duckBehavior = randInt.nextInt(4);
+		
+		if ((getLocation() == playerLocation) && (duckBehavior == 1)) {
+			// The player gets a point
+			return InteractionResult.GET_POINT;
+		}
+		else if ((getLocation() == playerLocation) && (duckBehavior == 2)) {
+			// The player gets hit
+			return InteractionResult.HIT;
+		}
+		else if ((getLocation() == playerLocation) && (duckBehavior == 3)) {
+			// The player advances to the next map
+			return InteractionResult.ADVANCE;
+		}
+		else {
+			// Default return case
+			return InteractionResult.NONE;
+		}
 	}
 	
 	@Override
@@ -48,5 +72,14 @@ public class Duck extends GamePiece implements Drawable, Moveable{
 	 * */
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		// @TODO: Have the duck move to a random location
+		
+		// Random object creation
+		Random randPosition = new Random();
+		
+		// Generate a random game board location between 0-Board Size - 1
+		int boardLocation = randPosition.nextInt(GameEngine.BOARD_SIZE);
+		
+		// Set the ducks location to the newly created location
+		location = boardLocation;
 	}
 }
