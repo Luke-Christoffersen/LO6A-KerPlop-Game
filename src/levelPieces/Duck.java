@@ -1,9 +1,10 @@
 package levelPieces;
 
 import gameEngine.Drawable;
+import gameEngine.Moveable;
 import gameEngine.InteractionResult;
 
-public class Duck extends GamePiece{
+public class Duck extends GamePiece implements Drawable, Moveable{
 	
 	/*
 	 * Constructor for a Duck moving game piece. This will be the randomly moving piece
