@@ -70,6 +70,10 @@ public abstract class GamePiece implements Drawable {
 		if (newLocation >= 0 && newLocation < GameEngine.BOARD_SIZE)
 			location = newLocation;
 	}
+	;
+	public void setSymbol(char newSymbol) {
+		symbol = newSymbol;
+	}
 	
 	@Override
 	public String toString() {
