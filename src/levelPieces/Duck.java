@@ -70,9 +70,7 @@ public class Duck extends GamePiece implements Drawable, Moveable{
 	 * @param gameBoard: An array of drawable symbols that makes up the game board
 	 * @param playerLocation: Integer value representing the location of the duck
 	 * */
-	public void move(Drawable[] gameBoard, int playerLocation) {
-		// @TODO: Have the duck move to a random location
-		
+	public void move(Drawable[] gameBoard, int playerLocation) {		
 		// Random object creation
 		Random randPosition = new Random();
 		
