@@ -9,11 +9,6 @@ import gameEngine.InteractionResult;
 
 public class Duck extends GamePiece implements Drawable, Moveable{
 	
-	// Private member variables
-	private char symbol;
-	private String label;
-	private int location;
-	
 	/*
 	 * Constructor for a Duck moving game piece. This will be the randomly moving piece
 	 * 
@@ -78,6 +73,6 @@ public class Duck extends GamePiece implements Drawable, Moveable{
 		int boardLocation = randPosition.nextInt(GameEngine.BOARD_SIZE);
 		
 		// Set the ducks location to the newly created location
-		location = boardLocation;
+		setLocation(boardLocation);
 	}
 }

@@ -9,11 +9,6 @@ import gameEngine.GameEngine;
 import gameEngine.Moveable;
 
 public class Goblin extends GamePiece implements Drawable, Moveable{
-
-	// Private member variables
-	private char symbol;
-	private String label;
-	private int location;
 	
 	/*
 	 * Constructor for a Goblin moving game piece. This will be the randomly moving piece
@@ -71,8 +66,8 @@ public class Goblin extends GamePiece implements Drawable, Moveable{
 		int newLocation = 0;
 		
 		// If location is less than the game board, move to the right
-		if (location < (GameEngine.BOARD_SIZE - 1)) {
-			newLocation = location + 1;
+		if (getLocation() < (GameEngine.BOARD_SIZE - 1)) {
+			newLocation = getLocation() + 1;
 			
 			// Check if the new location is at the border of the board size
 			if (newLocation > (GameEngine.BOARD_SIZE - 1)) {
@@ -80,5 +75,7 @@ public class Goblin extends GamePiece implements Drawable, Moveable{
 				newLocation = 0;
 			}
 		}
+		
+		setLocation(newLocation);
 	}
 }
