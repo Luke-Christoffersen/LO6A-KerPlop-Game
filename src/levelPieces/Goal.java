@@ -3,7 +3,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class Goal extends GamePiece {
+public class Goal extends GamePiece implements Drawable {
 
 	public Goal(char symbol, String label, int location) {
 		super(symbol, label, location);
@@ -16,4 +16,8 @@ public class Goal extends GamePiece {
         }
         return InteractionResult.NONE;
     }
+	@Override
+	public void draw() {
+		System.out.print(this.symbol);
+	}
 }

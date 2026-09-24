@@ -3,7 +3,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class Coin extends GamePiece {
+public class Coin extends GamePiece implements Drawable {
 	
 	private boolean collected;
 
@@ -20,5 +20,9 @@ public class Coin extends GamePiece {
 			return InteractionResult.GET_POINT;
 		}
 		return InteractionResult.NONE;
+	}
+	@Override
+	public void draw() {
+		System.out.print(this.symbol);
 	}
 }

@@ -3,7 +3,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class SpikePit extends GamePiece {
+public class SpikePit extends GamePiece implements Drawable {
 
 	public SpikePit(char symbol, String label, int location) {
 		super(symbol, label, location);
@@ -16,4 +16,8 @@ public class SpikePit extends GamePiece {
         }
         return InteractionResult.NONE;
     }
+	@Override
+	public void draw() {
+		System.out.print(this.symbol);
+	}
 }

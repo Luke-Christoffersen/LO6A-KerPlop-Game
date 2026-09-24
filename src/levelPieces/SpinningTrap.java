@@ -3,7 +3,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class SpinningTrap extends GamePiece {
+public class SpinningTrap extends GamePiece implements Drawable {
 
 	public SpinningTrap(char symbol, String label, int location) {
 		super(symbol, label, location);
@@ -16,5 +16,9 @@ public class SpinningTrap extends GamePiece {
 			return InteractionResult.HIT;
 		}
 		return InteractionResult.NONE;
+	}
+	@Override
+	public void draw() {
+		System.out.print(this.symbol);
 	}
 }
