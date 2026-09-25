@@ -65,27 +65,20 @@ public class Duck extends GamePiece implements Drawable, Moveable{
 	 * @param playerLocation: Integer value representing the location of the duck
 	 * */
 	@Override
-	public void move(Drawable[] gameBoard, int playerLocation) {		
-		// Random object creation
-		Random randPosition = new Random();
-		
-		int oldLoc = getLocation();
-		// Generate a random game board location between 0-Board Size - 1
-		int boardLocation = randPosition.nextInt(GameEngine.BOARD_SIZE);
-		
-		// Set the ducks location to the newly created location
-		setLocation(boardLocation);
-		
-		while (true) {
-			if (gameBoard[boardLocation] == null) {
-				gameBoard[getLocation()] = this;
-				break;
-			}
-			else {
-				boardLocation = randPosition.nextInt(GameEngine.BOARD_SIZE);
-				continue;
-			}
-		}
-		gameBoard[oldLoc] = null;
-	}
+    public void move(Drawable[] gameBoard, int playerLocation) {        
+        // Random object creation
+        Random randPosition = new Random();
+        
+        // Generate a random game board location between 0-Board Size - 1
+        int boardLocation;
+        
+        // Generate positions until they are free
+        do {
+            boardLocation = randPosition.nextInt(GameEngine.BOARD_SIZE);
+        } while (gameBoard[boardLocation] != null);
+  
+        gameBoard[this.getLocation()] = null;
+        gameBoard[boardLocation] = this; 
+        this.setLocation(boardLocation);
+    }
 }

@@ -55,6 +55,8 @@ public class LevelSetup {
 			interactingPieces.add(coin0);
 			interactingPieces.add(coin1);
 			interactingPieces.add(goal);
+			interactingPieces.add(duck1);
+			interactingPieces.add(duck2);
 			interactingPieces.add(pit);
 			interactingPieces.add(spinner);
 			

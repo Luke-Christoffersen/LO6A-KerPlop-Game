@@ -62,20 +62,22 @@ public class Goblin extends GamePiece implements Drawable, Moveable{
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		// @TODO: Have the goblin move to a random location
-		// Integer to store new location
-		int newLocation = 0;
-		
-		// If location is less than the game board, move to the right
-		if (getLocation() < (GameEngine.BOARD_SIZE - 1)) {
-			newLocation = getLocation() + 1;
-			
-			// Check if the new location is at the border of the board size
-			if (newLocation > (GameEngine.BOARD_SIZE - 1)) {
-				// newLocation is outside the game board, go back to index 0 of the board
-				newLocation = 0;
-			}
-		}
-		
-		setLocation(newLocation);
+	    int oldLocation = this.getLocation();
+	    int newLocation = oldLocation + 1;
+	    if (newLocation > GameEngine.BOARD_SIZE - 1) {
+	        newLocation = 0;
+	    }
+
+	    if (gameBoard[newLocation] != null) {
+	        // target cell is occupied by another piece — hop over the piece if so
+	    	newLocation += 1;
+	    	if (newLocation > GameEngine.BOARD_SIZE - 1) {
+	    		newLocation = 0;
+	    	}
+	    }
+
+	    gameBoard[oldLocation] = null;
+	    gameBoard[newLocation] = this;
+	    this.setLocation(newLocation);
 	}
 }
