@@ -21,13 +21,13 @@ public class Goblin extends GamePiece implements Drawable, Moveable{
 		super(symbol, label, location);
 	}
 	
-	@Override
 	/*
 	 * Overridden interact method from GamePiece. The goblin does one hit the first time it interacts with the player, then will kill the player on the second interaction
 	 * 
 	 * @param gameBoard: An array of drawable symbols that makes up the game board
 	 * @param playerLocation: Integer value representing the location of the duck
-	 * */ 
+	 * */
+	@Override 
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		// Interaction counter
 		int interactionCounter = 1;
@@ -47,19 +47,19 @@ public class Goblin extends GamePiece implements Drawable, Moveable{
 		}
 	}
 	
-	@Override
 	// Overridden draw method from Drawable. Prints out the symbol of the goblin
+	@Override
 	public void draw() {
 		System.out.print(this.symbol);
 	}
 	
-	@Override
 	/*
 	 * Overridden move method from Moveable. The goblin moves around to the right until it hits the border, then gets reset back to index 0
 	 * 
 	 * @param gameBoard: An array of drawable symbols that makes up the game board
 	 * @param playerLocation: Integer value representing the location of the duck
 	 * */
+	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		// @TODO: Have the goblin move to a random location
 		// Integer to store new location

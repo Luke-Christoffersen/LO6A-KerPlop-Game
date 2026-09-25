@@ -37,7 +37,7 @@ public class LevelSetup {
 			Goal goal = new Goal('X', "Goal", 18);
 			SpikePit pit = new SpikePit('^', "Spike Pit", 7);
 			Duck duck1 = new Duck('D', "Duck", 15);
-			Duck duck2 = new Duck('D', "Duck", 12);
+			Duck duck2 = new Duck('D', "Duck", 13);
 			SpinningTrap spinner = new SpinningTrap('-', "Spinning Trap", 5);
 			Wind wind = new Wind();
 			

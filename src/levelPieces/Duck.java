@@ -20,13 +20,13 @@ public class Duck extends GamePiece implements Drawable, Moveable{
 		super(symbol, label, location);
 	}
 	
-	@Override
 	/*
 	 * Overridden interact method from GamePiece. The duck moves around randomly and if it is in the same square as the player, it moves the player to a random location
 	 * 
 	 * @param gameBoard: An array of drawable symbols that makes up the game board
 	 * @param playerLocation: Integer value representing the location of the duck
 	 * */ 
+	@Override
 	public InteractionResult interact(Drawable[] gameboard, int playerLocation) {
 		
 		// Random object creation
@@ -52,27 +52,40 @@ public class Duck extends GamePiece implements Drawable, Moveable{
 		}
 	}
 	
-	@Override
 	// Overridden draw method from Drawable. Prints out the symbol of the duck
+	@Override
 	public void draw() {
 		System.out.print(this.symbol);
 	}
 	
-	@Override
 	/*
 	 * Overridden move method from Moveable. Moves the duck to a random position on the board
 	 * 
 	 * @param gameBoard: An array of drawable symbols that makes up the game board
 	 * @param playerLocation: Integer value representing the location of the duck
 	 * */
+	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {		
 		// Random object creation
 		Random randPosition = new Random();
 		
+		int oldLoc = getLocation();
 		// Generate a random game board location between 0-Board Size - 1
 		int boardLocation = randPosition.nextInt(GameEngine.BOARD_SIZE);
 		
 		// Set the ducks location to the newly created location
 		setLocation(boardLocation);
+		
+		while (true) {
+			if (gameBoard[boardLocation] == null) {
+				gameBoard[getLocation()] = this;
+				break;
+			}
+			else {
+				boardLocation = randPosition.nextInt(GameEngine.BOARD_SIZE);
+				continue;
+			}
+		}
+		gameBoard[oldLoc] = null;
 	}
 }
