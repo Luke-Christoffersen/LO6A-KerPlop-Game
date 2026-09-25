@@ -43,6 +43,8 @@ public class LevelSetup {
 			board[goal.getLocation()] = goal;
 			board[pit.getLocation()] = pit;
 			board[spinner.getLocation()] = spinner;
+			board[duck1.getLocation()] = duck1;
+			board[duck2.getLocation()] = duck2;
 			board[12] = wind;
 
 			// Add the interacting pieces to the list
