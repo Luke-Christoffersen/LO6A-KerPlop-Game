@@ -7,12 +7,13 @@ import gameEngine.Moveable;
 
 public class LevelSetup {
 	
-	
+	// Private member variables
 	private Drawable[] board;
 	private ArrayList<Moveable> movingPieces;
 	private ArrayList<GamePiece> interactingPieces;
 	private int playerStartLoc;
 	
+	// Constructor for LevelSetup
 	public LevelSetup() {
 		board = new Drawable[GameEngine.BOARD_SIZE];
 		movingPieces = new ArrayList<>();
@@ -21,13 +22,16 @@ public class LevelSetup {
 	}
 
 	public void createLevel(int levelNum) {
+		// Clear out the game board and pieces lists
 		board = new Drawable[GameEngine.BOARD_SIZE];
 		movingPieces = new ArrayList<>();
 		interactingPieces = new ArrayList<>();
 		
 		if (levelNum == 1) {
+			// Set the player start location
 			playerStartLoc = 10;
 
+			// Create the game pieces
 			Coin coin0 = new Coin('C', "Coin", 1, false);
 			Coin coin1 = new Coin('C', "Coin", 9, false);
 			Goal goal = new Goal('X', "Goal", 18);
@@ -37,7 +41,7 @@ public class LevelSetup {
 			SpinningTrap spinner = new SpinningTrap('-', "Spinning Trap", 5);
 			Wind wind = new Wind();
 			
-
+			// Add the pieces to the board
 			board[coin0.getLocation()] = coin0;
 			board[coin1.getLocation()] = coin1;
 			board[goal.getLocation()] = goal;
@@ -59,8 +63,10 @@ public class LevelSetup {
 			movingPieces.add(duck2);
 		}
 		else if (levelNum == 2) {
+			// Set the player start location
 			playerStartLoc = 10;
 
+			// Create the game pieces
 			Coin coin0 = new Coin('C', "Coin", 1, false);
 			Coin coin1 = new Coin('C', "Coin", 16, false);
 			Goal goal = new Goal('X', "Goal", 18);
@@ -69,7 +75,7 @@ public class LevelSetup {
 			Duck duck = new Duck('D', "Duck", 4);
 			Wind wind = new Wind();
 			
-
+			// Add each piece to the game board
 			board[coin0.getLocation()] = coin0;
 			board[coin1.getLocation()] = coin1;
 			board[goal.getLocation()] = goal;
@@ -93,6 +99,7 @@ public class LevelSetup {
 	}
 
 	public Drawable[] getBoard() {
+		// Return the game board
 		return board;
 	}
 
