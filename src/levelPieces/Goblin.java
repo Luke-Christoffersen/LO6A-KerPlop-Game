@@ -10,6 +10,8 @@ import gameEngine.Moveable;
 
 public class Goblin extends GamePiece implements Drawable, Moveable{
 	
+	private int interactionCounter = 1;
+	
 	/*
 	 * Constructor for a Goblin moving game piece. This will be the randomly moving piece
 	 * 
@@ -29,8 +31,6 @@ public class Goblin extends GamePiece implements Drawable, Moveable{
 	 * */
 	@Override 
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		// Interaction counter
-		int interactionCounter = 1;
 		
 		if ((getLocation() == playerLocation) && interactionCounter == 1) {
 			// First interaction, hit the player
