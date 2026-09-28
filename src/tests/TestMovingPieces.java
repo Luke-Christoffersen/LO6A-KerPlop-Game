@@ -51,6 +51,31 @@ public class TestMovingPieces {
 	
 	// JUnit Test Function to test the Goblin
 	public void testGoblin() {
+		// Follow a similar format to that of the TestInteractingPices, except move the goblin every loop iteration
 		
+		// Create a temporary game board
+		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		
+		// Create a goblin object
+		Goblin goblin = new Goblin('G', "Goblin", 10);
+		
+		// Add the goblin to the game board at its starting location
+		gameBoard[goblin.getLocation()] = goblin;
+		
+		// Test the two hit conditions
+		assertEquals(InteractionResult.HIT, goblin.interact(gameBoard, 10));
+		assertEquals(InteractionResult.HIT, goblin.interact(gameBoard, 10));
+		
+		// Loop through the first half of the game board and test the interact after moving the goblin
+		for (int i = 0; i < 10; i++) {
+			goblin.move(gameBoard, i);
+			assertEquals(InteractionResult.NONE, goblin.interact(gameBoard, i));
+		}
+		
+		// Loop through the second half of the game board and test the interaction after moving the goblin
+		for (int i = 11; i < GameEngine.BOARD_SIZE; i++) {
+			goblin.move(gameBoard, i);
+			assertEquals(InteractionResult.NONE, goblin.interact(gameBoard, i));
+		}
 	}
 }
