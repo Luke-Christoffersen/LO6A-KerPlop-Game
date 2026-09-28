@@ -1,0 +1,139 @@
+commit b9b761ba3f44339e43cd5a3ce886d173751542ab
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 25 16:37:15 2026 -0600
+
+    Final state of the game: good
+
+commit f95bde9c0a35ea391b8247d59785b5e493188f27
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 25 12:21:18 2026 -0600
+
+    Updated move functionality for goblin
+
+commit 765cb764b46ab33ee8f78850bb3fe24e0b911c46
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 25 09:51:52 2026 -0600
+
+    Updating move functionality
+
+commit 603932b046963e2f101cae231681ab35e0b5c28b
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 24 18:15:48 2026 -0600
+
+    Added comments for readability
+
+commit fc686428edc37d70851f327599e0ab12ae432784
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 24 18:07:11 2026 -0600
+
+    Added new ducks to level 1
+
+commit faf3d731e760709b28628c93586ec711311c0677
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 24 18:02:45 2026 -0600
+
+    feat: finsihed LevelSetup implementation and added extra game pieces to the level setup
+
+commit e3b95b71610604af37d0d0c6daf51bd17aed68ef
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 24 17:53:11 2026 -0600
+
+    Removed unecessary private variables from Duck and Goblin
+
+commit fa2b2cc772743efae2dc7220059b2efc25a33ee1
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Thu Sep 24 17:43:05 2026 -0600
+
+    feat: added constructor, createLevel, and getBoard implementation for LevelSetup
+
+commit b01dc76079333a3ae01bfc605e9bf4f667f6dae7
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Thu Sep 24 16:51:37 2026 -0600
+
+    feat: added drawable non-piece wind
+
+commit 7902b9c6ac52b19205dd1ba5672f648a79906944
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Thu Sep 24 16:44:52 2026 -0600
+
+    fix: small bug fix for coin class
+
+commit fb6eacae9595fd9e3b099852a2edc663affca567
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Thu Sep 24 16:40:52 2026 -0600
+
+    fix: added drawable to stationary classes
+
+commit 1fbbf45822bab8f362b3243ed98c669ebfe78949
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Wed Sep 23 18:26:57 2026 -0600
+
+    feat: goblin game piece has been created and is now functional
+
+commit b911b15030468e7a3baccb5106d5f3f5484cc688
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Wed Sep 23 16:11:15 2026 -0600
+
+    feat: duck move and interact functionality completed. Duck is a usable game piece
+
+commit 1e1ec87ac8a4675c297f8ccd31891288d5f0114f
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Wed Sep 23 15:25:28 2026 -0600
+
+    Added draw functionality, imported random package, and added TODO comments for interact and move
+
+commit 7c1fcc6c1d1fe3b133079711e79647250f4d41a9
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Wed Sep 23 15:09:15 2026 -0600
+
+    Added functionality for Duck to impement interfaces Drawable and Moveable
+
+commit 42ea09e099f13c3dac18e53c077b530d856ef1cb
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Wed Sep 23 15:01:23 2026 -0600
+
+    feat: fixed up stationary pieces, added symbol setter in GamePiece
+
+commit d64bdd64042253c35bcadc421eda7531d4815eea
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Wed Sep 23 12:50:34 2026 -0600
+
+    Initial shell for Duck game piece
+
+commit 41014b4ee856e19715c43e2b2a8543a052efba85
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Wed Sep 23 11:48:36 2026 -0600
+
+    feat: added 4 non moving pieces
+
+commit 1bf5da7c4ea379bca5941e1579a5c686cdf1992f
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Tue Sep 22 20:30:22 2026 -0600
+
+    feat: added gitignore for real this time
+
+commit d919018f2ba306e1ac6b56ec62ce3c72b5297d28
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Tue Sep 22 20:25:01 2026 -0600
+
+    feat: added gitignore and added LevelSetup file with empty methods
+
+commit 1b283ac0ea3b9f2b60cc3162fb973f19e9ec141b
+Merge: 142f5f2 f0da0af
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Tue Sep 22 19:19:01 2026 -0600
+
+    Merge branch 'main' of https://github.com/Luke-Christoffersen/LO6A-KerPlop-Game
+    Needed to get everything else pushed up
+
+commit 142f5f228720646f8b200a1c0736ccf74b2c23d4
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Tue Sep 22 19:10:47 2026 -0600
+
+    Initial push will all skeleton code
+
+commit f0da0af6a435e5432c36f882ce55c69b731f86ec
+Author: Luke Christoffersen <luke_christoffersen@mines.edu>
+Date:   Fri Sep 18 12:45:29 2026 -0600
+
+    Initial commit
